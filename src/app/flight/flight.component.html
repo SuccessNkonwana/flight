@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
+                    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" 
+                    crossorigin="anonymous">
+
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div id="booking" class="section">
+        
+		<div class="section-center">
+			<div class="container">
+                    <div class="top">
+                        <h1>SAFlight</h1>
+                    </div>
+				<div class="row">
+					<div class="booking-form">
+						<form>
+							<div class="form-group">
+								<div class="form-checkbox">
+									<label for="roundtrip">
+										<input type="radio" id="roundtrip" name="flight-type">
+										<span></span>Roundtrip
+									</label>
+									<label for="one-way">
+										<input type="radio" id="one-way" name="flight-type">
+										<span></span>One way
+									</label>
+									<label for="multi-city">
+										<input type="radio" id="multi-city" name="flight-type">
+										<span></span>Multi-City
+									</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label">Flying from</span>
+                                        <select class="form-control">
+                                                <option></option>
+                                                <option>Johannesburg</option>
+                                                <option>Durban</option>
+                                                <option>Cape town</option>
+                                                <option>PortElizaberth</option>
+                                            </select>
+										
+										
+
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label">Flying to</span>
+                                        <select class="form-control">
+                                                <option></option>
+                                                <option>Johannesburg</option>
+                                                <option>Durban</option>
+                                                <option>Cape town</option>
+                                                <option>PortElizaberth</option>
+                                            </select>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3">
+									<div class="form-group">
+										<span class="form-label">Departing</span>
+										<input class="form-control" type="date" required>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<span class="form-label">Returning</span>
+										<input class="form-control" type="date" required>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group">
+										<span class="form-label">Adults (18+)</span>
+										<select class="form-control">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+										</select>
+										<span class="select-arrow"></span>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group">
+										<span class="form-label">Children (0-17)</span>
+										<select class="form-control">
+											<option>0</option>
+											<option>1</option>
+											<option>2</option>
+										</select>
+										<span class="select-arrow"></span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3">
+									<div class="form-group">
+										<span class="form-label">Travel class</span>
+										<select class="form-control">
+											<option>Economy class</option>
+											<option>Business class</option>
+											<option>First class</option>
+										</select>
+										<span class="select-arrow"></span>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-btn">
+										<button class="submit-btn">Show flights</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+    
+    <div class="background2">
+            <div class='container'>
+                <h1>About SAFlights</h1>
+            <div class="row">
+                
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                            <div class="services-box leftReveal" data-sr-id="13">
+                                
+                                
+                                <h3 class="service-name">1. Who are we</h3>
+                                <p class="text-small">
+                                        SAFlights.co.za is your go-to site for flight bookings from South Africa.<br>
+                                        We’re a team of passionate, savvy travellers on a mission to make it easy for you to find the cheapest domestic and international flights.<br>
+                                        As one of the world’s largest flight comparison websites, SAFlights is the starting point for your travel planning.
+                                </p>
+                                
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <div class="services-box leftReveal" data-sr-id="13">
+                                
+                                
+                                <h3 class="service-name">2. How do we do it?</h3>
+                                <p class="text-small">
+                                        Our innovative flight booking, curated deals and inspirational content make it simple to find cheap flights across South Africa.
+                                        <br>
+                                        We partner with hundreds of airlines and travel providers – all over South Africa  - to bring you the cheapest flights and personalised travel options.
+                                        <br>
+                                        We then link you directly to the airlines or travel agents to book your flights and open up new travel possibilities to see the whole SA on a budget.
+                                </p>
+                                
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <div class="services-box leftReveal" data-sr-id="13">
+                                
+                                
+                                <h3 class="service-name">3. Why come to us?</h3>
+                                <p class="text-small">
+                                        Millions of travellers rely on us for trusted advice and the best selection of cheap flights and travel deals.<br> Our service is completely free - we will not charge you a rand.
+                                        <br>
+                                        We have been serving up useful tips, destination information and travel inspiration since 1996.
+                                        <br>
+                                        We know South Africa, we know the world. We combine experience with local knowledge and our global network of partners to create amazing travel moments that matter.
+                                </p>
+                                
+                            </div>
+                        </div>
+            </div>
+        </div>
+        </div>
+
+<!-- Contact us section -->
+<section class="contact pt-100 pb-100" id="contact">
+        <div class="container">
+           <div class="row">
+              <div class="col-xl-6 mx-auto text-center">
+                 <div class="section-title mb-100">
+                    <p>Like travel deals? Get in touch with us</p>
+                    <h4>contact us</h4>
+                 </div>
+              </div>
+           </div>
+           <div class="row text-center">
+             <!-- Contact form -->
+                 <div class="col-md-4">
+                    <form action="">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="form-group">
+                              <input type="text" class="form-control mt-2" placeholder="First Name" required>
+                            </div><br>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="form-group">
+                              <input type="text" class="form-control mt-2" placeholder="Last Name" required>
+                            </div>
+                          </div><br>
+                          <div class="col-lg-6">
+                            <div class="form-group">
+                              <input type="email" class="form-control mt-2" placeholder="Email Address" required>
+                            </div>
+                          </div><br>
+                          <div class="col-lg-6">
+                            <div class="form-group">
+                              <input type="number" class="form-control mt-2" placeholder="Telephone number" required>
+                            </div>
+                          </div><br>
+                          <div class="col-12">
+                            <div class="form-group">
+                              <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Your message" rows="3" required></textarea>
+                            </div>
+                          </div><br>
+                          <div class="col-12">
+                          <div class="form-group">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                              <label class="form-check-label" for="invalidCheck2">
+                                Accept terms and conditions
+                              </label>
+                            </div>
+                          </div>
+                          </div>
+                          <div class="col-12">
+                            <button class="btn btn-light" type="submit">Submit</button>
+                          </div>
+                        </div>
+                      </form>
+                 </div>
+                 <!-- contact details -->
+                 <div class="col-md-4">
+                    <div class="single-contact">
+                       <i class="fa fa-map-marker"></i>
+                       <h5>Address</h5>
+                       <p>58 kotze street pretoria</p>
+                    </div>
+                    <div class="single-contact">
+                       <i class="fa fa-phone"></i>
+                       <h5>Phone</h5>
+                       <a href="tel:0797620822">(+27) 797620822</a>
+                    </div>
+                    <div class="single-contact">
+                       <i class="fa fa-envelope"></i>
+                       <h5>Email</h5>
+                       <a href="mailto:nkonwanasuccess@gmail.com">nkonwanasuccess@gmail.com</a>
+                    </div>
+                 </div>
+                 
+                 
+                 <div class="col-md-4">
+                  <div class="single-contact">
+                      <i class="far fa-calendar-alt"></i>
+                     <h5>Working hours</h5>
+                     <p>Monday- Friday</p>
+                     <p>24 hours</p>
+                  </div>
+                  <div class="single-contact">
+                      <p>Saturday- Sunday</p>
+                      <p>24 hours</p>
+                  </div>
+                  <div class="single-contact">
+                      <p>Public hilidays</p>
+                      <p>24 hours</p>
+                  </div>
+               </div>
+           </div>
+        </div>
+      </section>
+          
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
