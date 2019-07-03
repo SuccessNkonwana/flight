@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,31 +19,42 @@
                     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
                     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
 </head>
 
 <body>
 	<div id="booking" class="section">
-        
-		<div class="section-center">
+      <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#booking">Home</a>
+          <a class="navbar-brand" href="#about">About</a>
+          <a class="navbar-brand" href="#contact">Contact</a>
+      <!-- <nav class="navbar">
+          <a href="#booking">Home</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a> -->
+      </nav> 
+		<div class="section-center" >
 			<div class="container">
-                    <div class="top">
-                        <h1>SAFlight</h1>
+                    <div class="top" style="color: #000;">
+                        <h1>SAFlight</h1><i class="fa fa-plane" style="font-size:60px;color:rgb(87, 152, 196);text-shadow:2px 2px 4px #000000;"></i>
+                        <h3 style="color: #000;">Smart booking. Made simple.</h3>
                     </div>
+                    
 				<div class="row">
 					<div class="booking-form">
 						<form>
 							<div class="form-group">
-								<div class="form-checkbox">
+								<div class="form-checkbox" id="trip">
 									<label for="roundtrip">
-										<input type="radio" id="roundtrip" name="flight-type">
+										<input type="radio" id="roundtrip"value="roundtrip" name="flight-type" (change)="tripChangeHandler($event)">
 										<span></span>Roundtrip
 									</label>
 									<label for="one-way">
-										<input type="radio" id="one-way" name="flight-type">
+										<input type="radio" id="one-way" value="one-way" name="flight-type" (change)="tripChangeHandler($event)">
 										<span></span>One way
 									</label>
 									<label for="multi-city">
-										<input type="radio" id="multi-city" name="flight-type">
+										<input type="radio" id="multi-city" value="multi-city" name="flight-type" (change)="tripChangeHandler($event)">
 										<span></span>Multi-City
 									</label>
 								</div>
@@ -49,28 +62,29 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<span class="form-label">Flying from</span>
-                                        <select class="form-control">
-                                                <option></option>
-                                                <option>Johannesburg</option>
-                                                <option>Durban</option>
-                                                <option>Cape town</option>
-                                                <option>PortElizaberth</option>
-                                            </select>
-										
+                    <span class="form-label">Flying from</span>
+                    
+                        <select class="form-control" (change)="fromChangeHandler($event)">
+                          <option></option>
+                          <option value="Johannesburg">Johannesburg</option>
+                          <option value="Durban">Durban</option>
+                          <option value="Cape town">Cape town</option>
+                          <option value="PortElizaberth">PortElizaberth</option>
+                      </select>
 										
 
 									</div>
-								</div>
+                </div>
+                
 								<div class="col-md-6">
 									<div class="form-group">
 										<span class="form-label">Flying to</span>
-                                        <select class="form-control">
+                                        <select class="form-control" (change)="toChangeHandler($event)">
                                                 <option></option>
-                                                <option>Johannesburg</option>
-                                                <option>Durban</option>
-                                                <option>Cape town</option>
-                                                <option>PortElizaberth</option>
+                                                <option value="Johannesburg">Johannesburg</option>
+                                                <option value="Durban">Durban</option>
+                                                <option value="Cape town">Cape town</option>
+                                                <option value="PortElizaberth">PortElizaberth</option>
                                             </select>
 									</div>
 								</div>
@@ -79,53 +93,80 @@
 								<div class="col-md-3">
 									<div class="form-group">
 										<span class="form-label">Departing</span>
-										<input class="form-control" type="date" required>
+										<input class="form-control" type="date" required (change)="departChangeHandler($event)">
 									</div>
 								</div>
 								<div class="col-md-3">
 									<div class="form-group">
 										<span class="form-label">Returning</span>
-										<input class="form-control" type="date" required>
+										<input class="form-control" type="date" required (change)="returnChangeHandler($event)">
 									</div>
 								</div>
-								<div class="col-md-2">
+								<div class="col-md-3">
 									<div class="form-group">
-										<span class="form-label">Adults (18+)</span>
-										<select class="form-control">
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
+										<span class="form-label" >Tickets </span>
+										<select class="form-control" (change)="adultChangeHandler($event)">
+                      <option></option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
 										</select>
 										<span class="select-arrow"></span>
 									</div>
 								</div>
-								<div class="col-md-2">
+								<!-- <div class="col-md-2">
 									<div class="form-group">
 										<span class="form-label">Children (0-17)</span>
-										<select class="form-control">
-											<option>0</option>
-											<option>1</option>
-											<option>2</option>
+										<select class="form-control" (change)="childChangeHandler($event)">
+											<option value="0">0</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
 										</select>
 										<span class="select-arrow"></span>
 									</div>
-								</div>
+								</div> -->
 							</div>
 							<div class="row">
 								<div class="col-md-3">
 									<div class="form-group">
 										<span class="form-label">Travel class</span>
-										<select class="form-control">
-											<option>Economy class</option>
-											<option>Business class</option>
-											<option>First class</option>
-										</select>
+										<select class="form-control" (change)="classChangeHandler($event)" >
+                      <option></option>
+											<option value="Economy class">Economy class</option>
+											<option value="Business class">Business class</option>
+											<option value="First class">First class</option>
+                    </select>
+                    
 										<span class="select-arrow"></span>
 									</div>
 								</div>
 								<div class="col-md-3">
 									<div class="form-btn">
-										<button class="submit-btn">Show flights</button>
+                    
+                    <!-- <button class="submit-btn" routerLink="/payment">Book Flight</button> -->
+                    <!-- booked tickets -->
+          
+          <button class="open-button" (click)="openForm()">Confirm your selection</button>
+          
+          <div class="form-popup" id="myForm">
+            <form action="/payment" class="form-container">
+              <h1>Confirm your info to Book your ticket(s)</h1>
+              <p>Trip type:{{trip}}</p>
+                <p>From:  {{from}} </p>
+                <p>To:  {{to}}</p>
+                <p>Departing date:{{depart}}</p>
+                <p>Returning date:{{return}}</p>
+                <p>Travel class: {{class}}</p>
+                <p>Number of tickets: {{adults}}</p><br>
+                <p>Price per ticket: R{{flightAmount}}</p>
+                <p>Total price: R{{total}}</p>
+          
+              <button type="submit" class="btn" routerLink="/payment">Book</button>
+              <button type="button" class="btn cancel" (click)="closeForm()">Edit</button>
+            </form>
+          </div>
+                    
+
 									</div>
 								</div>
 							</div>
@@ -136,9 +177,10 @@
 		</div>
     </div>
     
-    <div class="background2">
-            <div class='container'>
+    <div class="background2" id="about">
+          <div class='container'>
                 <h1>About SAFlights</h1>
+                <br>
             <div class="row">
                 
             <div class="col-xs-12 col-sm-6 col-md-4">
@@ -185,12 +227,45 @@
                             </div>
                         </div>
             </div>
+
+
+            
         </div>
         </div>
 
+
+<div class="con">
+    <h2>Top Destinations</h2>
+    <p>Find the best price on flights to our most popular destinations from airports across South Africa. </p>
+    <div class="row">
+      <div class="col-4">
+          <img src="assets/durban.jpg" alt="Los Angeles" >
+          <div class="carousel-caption">
+            <h3>Durban</h3>
+           <h3>Flight from R 1150</h3>
+          </div>
+      </div>
+      <div class="col-4">
+          <img src="assets/capetown.jpg" alt="Chicago" width="1100" height="500">
+        <div class="carousel-caption">
+          <h3>Cape town</h3>
+          <h3>Flight from R 1220</h3>>
+        </div>
+      </div>
+      <div class="col-4">
+          <img src="assets/johannesburg.jpg" alt="New York" width="1100" height="500">
+        <div class="carousel-caption">
+          <h3>Johannesburg</h3>
+          <h3>Flight from R 950</h3>>
+        </div>
+      </div>
+      
+    </div>
+</div>
+
 <!-- Contact us section -->
 <section class="contact pt-100 pb-100" id="contact">
-        <div class="container">
+        <div class="container"id="contact">
            <div class="row">
               <div class="col-xl-6 mx-auto text-center">
                  <div class="section-title mb-100">
@@ -232,7 +307,7 @@
                           <div class="col-12">
                           <div class="form-group">
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                              <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>&nbsp;&nbsp;
                               <label class="form-check-label" for="invalidCheck2">
                                 Accept terms and conditions
                               </label>
@@ -283,8 +358,16 @@
                </div>
            </div>
         </div>
+        <footer class="footer" >
+            <p style="color: cornsilk">Created by: Success Nkonwana</p>
+           
+          </footer>
       </section>
-          
+      
+      
+         
+            
+               
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
 </html>
